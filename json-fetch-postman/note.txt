@@ -23,3 +23,13 @@ Promise
     + catch()  nhận callback function được thực thi khi rej ( tất cả .then() ở trên lỗi thì đều
 async và await để tối ưu kết hợp với Promise.all() trong thực tế.
 
+1. Promise.resolve
+2. Promise.reject
+3. Promise.all
+
+
+===============ES6=====
+1. var / let, const: scope, hoisting -> đưa lên đầu
+2. const / var, let: Assignment
+-> code block: if else, loop, {}, ...
+
