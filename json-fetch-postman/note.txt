@@ -1,0 +1,25 @@
+JSON là 1 định dạng dữ liệu (chuỗi)
+- Javascript Object Notation
+JSON chuyển đổi qua lại Number, String, Boolean, Null, Array, Object -> Stringify / Parse
+Stringify: Từ Javascript types -> JSON
+Parse: Từ JSON -> Javascript types
+
+Promise 
+  - Sync
+  - Async
+  - Pain
+  - Lý thuyết, cách hoạt động Promise
+  - thực hành, ví dụ
+
+Callback hell, Pyramid of doom -> promise giải quyết 
+
+Promise
+*Sinh ra từ phiên bản es6 để xử lý callback hell đã tồn tại trước đó ( viết code dài, nhìn khó hiểu…)
+* Để khai báo đối tượng mới dùng từ khoá new Promise() truyền vào 1 constructor Executor trong đó nhận được 2 tham số ( res, rej) 
+      + res gọi khi thao tác xử lý thành công
+      + rej gọi khi thao tác xử lý thất bại
+*Khi đối tượng promise được tạo ra sử dụng các phương thức 
+    +.then()  nhận callback function được thực thi khi res thành công (chú ý là ta có thể .then()  nhiều lần )
+    + catch()  nhận callback function được thực thi khi rej ( tất cả .then() ở trên lỗi thì đều
+async và await để tối ưu kết hợp với Promise.all() trong thực tế.
+
