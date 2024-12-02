@@ -33,3 +33,10 @@ async và await để tối ưu kết hợp với Promise.all() trong thực t�
 2. const / var, let: Assignment
 -> code block: if else, loop, {}, ...
 
+Arrow function ko có context, ko thể sử dụng làm function constructor
+
+Template listerals(Template string)
+Enhanced object literals trong javascript ES6
+  -> Định nghĩa key: value cho object
+  -> Định nghĩa method cho object
+  -> Định nghĩa key cho object dưới dạng biến

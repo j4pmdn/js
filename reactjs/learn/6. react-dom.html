@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React DOM</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+  <!-- 
+    1. Tại sao phải sử dụng React-DOM?
+    2. Tạo sạo lại tách React-DOM ra?
+    3. Render UI
+    React DOM là cầu nối giữa react và dom
+  -->
+
+  <!-- 
+    <div class="post-item">
+      <h2 title="Học React tại F8">Học ReactJS</h2>
+      <p>Học ReactJS từ cơ bản đến nâng cao</p>
+  </div>
+  -->
+
+  <div id="root"></div>
+  
+  <script>
+    //React
+    // const postItem = React.createElement(
+    //   'div',
+    //   {
+    //     clasName: 'post-item'
+    //   },
+    //   React.createElement(
+    //     'h2',
+    //     {
+    //       title: 'Học React tại F8'
+    //     },
+    //     'Học ReactJS'
+    //   ),
+    //   React.createElement('p', {}, 'Học ReactJS từ cơ bản đến nâng cao')
+    // );
+
+    // console.log(postItem);
+
+    // Get root element
+    const root = document.getElementById('root');
+
+    // React-DOM -> render UI
+        // ReactDOM.render(postItem, root);
+
+    const h1Item = React.createElement(
+      'h1',
+      {
+        title: 'Hello',
+        className: 'heading'
+      },
+      'Hello Guys!'
+    )
+
+    console.log(h1Item);
+    // ReactDOM.render(h1Item, root);
+
+    const ulItem = React.createElement(
+      'ul',
+      {},
+      React.createElement('li', {}, 'Javascript'),
+      React.createElement('li', {}, 'ReactJS')
+    )
+    // console.log(ulItem);
+    ReactDOM.render(ulItem, root);
+
+  </script>
+
+</body> 
+</html>

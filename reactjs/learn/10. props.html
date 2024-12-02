@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"crossorigin></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+
+    <!-- 
+      props
+
+      - React elements
+        - Sử dụng props giống như với attributes của thẻ HTML
+        - 2 props class, for => className, htmlFor
+        - Phải tuân theo quy ước có sẵn
+      - React components
+        - Sử dụng props giống như đối số cho Components/function
+        - Tự do đặt tên props
+          - Đặt theo camelCase
+          - Có thể bao gồm dấu gạch ngang
+      - Chú ý:
+        - Prop "key" là pro đặc biệt
+        - Props cơ bản là đối số của component
+          => Props có thể là bất cứ kiểu dữ liệu gì
+        - sử dụng destructering
+
+    -->
+
+    <!-- 
+      expect
+     <div class="post-list">
+        <div class="post-item">
+          <h2 title="Học React tại F8">Học ReactJS</h2>
+          <p>Học ReactJS từ cơ bản đến nâng cao</p>
+          <p>Học ReactJS từ cơ bản đến nâng cao</p>
+        </div>
+      </div>
+    -->
+
+    <div id="root"></div>
+    
+    <script type="text/babel">
+
+      // PostItem.js
+      function PostItem(){
+        return (
+          <div className="post-item">
+            <h2 title="Học React tại F8">Học ReactJS</h2>
+            <p>Học ReactJS từ cơ bản đến nâng cao</p>
+            <p>Học ReactJS từ cơ bản đến nâng cao</p>
+          </div>
+        )
+      }
+
+      // App.js
+      function App(){
+        console.log(<PostItem title="Title test" />);
+        return (
+          <div id="wrapper">
+            
+          </div>
+        )
+      }
+
+      // index.js
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
